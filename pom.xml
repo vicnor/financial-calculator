@@ -16,7 +16,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <modules></modules>
+    <modules>
+        <module>financial-calculator-models</module>
+    </modules>
 
     <dependencyManagement>
         <dependencies>
@@ -40,6 +42,12 @@
                 <artifactId>lombok</artifactId>
                 <scope>provided</scope>
                 <version>1.18.22</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.vicnor</groupId>
+                <artifactId>financial-calculator-models</artifactId>
+                <version>${project.version}</version>
             </dependency>
 
         </dependencies>
