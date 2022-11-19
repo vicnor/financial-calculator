@@ -18,6 +18,7 @@
 
     <modules>
         <module>financial-calculator-models</module>
+        <module>financial-calculator-service</module>
     </modules>
 
     <dependencyManagement>
