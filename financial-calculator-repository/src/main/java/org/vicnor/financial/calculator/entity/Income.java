@@ -1,4 +1,7 @@
-package org.vicnor.financial.calculator.model;
+package org.vicnor.financial.calculator.entity;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.Digits;
@@ -8,31 +11,29 @@ import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-public class IncomeDto {
+@Document("income")
+public class Income {
 
+    public Income(String description, LocalDate dueDate, BigDecimal amount) {
+        this.description = description;
+        this.dueDate = dueDate;
+        this.amount = amount;
+    }
+
+    @Id
     private String id;
 
     @NotBlank
     private String description;
 
-    @NotNull
     @Future
+    @NotNull
     private LocalDate dueDate;
 
     @NotNull
     @DecimalMin(value = "0.0", inclusive = false)
     @Digits(integer = 3, fraction = 2)
     private BigDecimal amount;
-
-    public IncomeDto() {
-    }
-
-    public IncomeDto(String id, String description, LocalDate dueDate, BigDecimal amount) {
-        this.id = id;
-        this.description = description;
-        this.dueDate = dueDate;
-        this.amount = amount;
-    }
 
     public String getId() {
         return id;

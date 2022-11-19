@@ -19,6 +19,7 @@
     <modules>
         <module>financial-calculator-model</module>
         <module>financial-calculator-service</module>
+        <module>financial-calculator-repository</module>
     </modules>
 
     <dependencyManagement>
@@ -39,15 +40,14 @@
             </dependency>
 
             <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <scope>provided</scope>
-                <version>1.18.22</version>
+                <groupId>org.vicnor</groupId>
+                <artifactId>financial-calculator-model</artifactId>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.vicnor</groupId>
-                <artifactId>financial-calculator-model</artifactId>
+                <artifactId>financial-calculator-repository</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
