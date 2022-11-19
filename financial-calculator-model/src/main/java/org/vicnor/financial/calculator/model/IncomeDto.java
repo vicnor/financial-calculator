@@ -1,4 +1,4 @@
-package org.vicnor.financial.calculator.models;
+package org.vicnor.financial.calculator.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

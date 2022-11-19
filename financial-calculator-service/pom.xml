@@ -22,7 +22,7 @@
         </dependency>
         <dependency>
             <groupId>org.vicnor</groupId>
-            <artifactId>financial-calculator-models</artifactId>
+            <artifactId>financial-calculator-model</artifactId>
         </dependency>
     </dependencies>
 

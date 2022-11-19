@@ -17,7 +17,7 @@
     </properties>
 
     <modules>
-        <module>financial-calculator-models</module>
+        <module>financial-calculator-model</module>
         <module>financial-calculator-service</module>
     </modules>
 
@@ -47,7 +47,7 @@
 
             <dependency>
                 <groupId>org.vicnor</groupId>
-                <artifactId>financial-calculator-models</artifactId>
+                <artifactId>financial-calculator-model</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
