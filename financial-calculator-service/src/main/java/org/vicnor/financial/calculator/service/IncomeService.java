@@ -14,4 +14,6 @@ public interface IncomeService {
 
     void deleteById(String id);
 
+    Integer getTotal();
+
 }

@@ -43,4 +43,9 @@ public class IncomeController {
         incomeService.deleteById(id);
     }
 
+    @GetMapping("/income/total")
+    public Integer getTotalIncomes(){
+        return incomeService.getTotal();
+    }
+
 }
