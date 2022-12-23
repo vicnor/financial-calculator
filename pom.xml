@@ -19,7 +19,7 @@
     <modules>
         <module>financial-calculator-model</module>
         <module>financial-calculator-service</module>
-        <module>financial-calculator-repository</module>
+        <module>financial-calculator-data</module>
     </modules>
 
     <dependencyManagement>
@@ -44,7 +44,7 @@
             </dependency>
             <dependency>
                 <groupId>org.vicnor</groupId>
-                <artifactId>financial-calculator-repository</artifactId>
+                <artifactId>financial-calculator-data</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
