@@ -4,10 +4,13 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.vicnor.financial.calculator.model.IncomeDto;
+import org.vicnor.financial.calculator.model.IncomeListDto;
+import org.vicnor.financial.calculator.model.UpdateIncomeDto;
 import org.vicnor.financial.calculator.service.IncomeService;
 
 import javax.validation.Valid;
@@ -25,7 +28,13 @@ public class IncomeController {
 
     @PostMapping("/income")
     public IncomeDto create(@RequestBody @Valid IncomeDto incomeDto) {
-        return incomeService.createIncome(incomeDto);
+        return incomeService.create(incomeDto);
+    }
+
+    @PutMapping("/income/{id}")
+    public IncomeDto update(@RequestBody @Valid UpdateIncomeDto updateIncomeDto,
+                            @PathVariable("id") String id) {
+        return incomeService.update(updateIncomeDto, id);
     }
 
     @GetMapping("/income/{id}")
@@ -34,7 +43,7 @@ public class IncomeController {
     }
 
     @GetMapping("/incomes")
-    public List<IncomeDto> findAll() {
+    public IncomeListDto findAll() {
         return incomeService.findAll();
     }
 

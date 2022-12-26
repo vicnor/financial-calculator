@@ -8,7 +8,6 @@ public class FinancialCalculatorAppTests {
 
     @Test
     public void contextLoads() {
-
     }
 
 }
